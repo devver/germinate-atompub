@@ -1,0 +1,5 @@
+---
+:login: "Please enter your blog login: "
+:password: "Please enter your blog password: "
+:service_url: "Please enter the blog URL"
+:collection:  "Please choose a collection to post to:"
