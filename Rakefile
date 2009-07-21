@@ -31,6 +31,11 @@ PROJ.version = GerminateAtompub::VERSION
 PROJ.rubyforge.name = 'germinate-app'
 PROJ.ignore_file = '.gitignore'
 
+depend_on 'ick',        '~> 0.3.0'
+depend_on 'atom-tools', '~> 2.0.3'
+depend_on 'highline',   '~> 1.5.0'
+depend_on 'fattr',      '~> 1.0.3'
+
 PROJ.spec.opts << '--color'
 
 # EOF

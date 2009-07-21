@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.email = %q{avdi@avdi.org}
   s.executables = ["germinate-atompub"]
   s.extra_rdoc_files = ["History.txt", "README.txt", "bin/germinate-atompub", "lib/text.yml"]
-  s.files = ["History.txt", "README.txt", "Rakefile", "bin/germinate-atompub", "examples/hello.rb", "lib/germinate-atompub.rb", "lib/germinate-atompub/atompub_publisher.rb", "lib/germinate_plugin_v0_init.rb", "lib/text.yml", "spec/germinate-atompub/atompub_publisher_spec.rb", "spec/germinate-atompub_spec.rb", "spec/spec_helper.rb", "test/test_germinate-atompub.rb"]
+  s.files = ["History.txt", "README.txt", "Rakefile", "bin/germinate-atompub", "examples/hello.rb", "germinate-atompub.gemspec", "lib/germinate-atompub.rb", "lib/germinate-atompub/atompub_publisher.rb", "lib/germinate_plugin_v0_init.rb", "lib/text.yml", "spec/germinate-atompub/atompub_publisher_spec.rb", "spec/germinate-atompub_spec.rb", "spec/spec_helper.rb", "test/test_germinate-atompub.rb"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/devver/germinate-wordpress}
   s.rdoc_options = ["--main", "README.txt"]
@@ -27,11 +27,23 @@ Gem::Specification.new do |s|
     s.specification_version = 2
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<ick>, ["~> 0.3.0"])
+      s.add_runtime_dependency(%q<atom-tools>, ["~> 2.0.3"])
+      s.add_runtime_dependency(%q<highline>, ["~> 1.5.0"])
+      s.add_runtime_dependency(%q<fattr>, ["~> 1.0.3"])
       s.add_development_dependency(%q<bones>, [">= 2.5.1"])
     else
+      s.add_dependency(%q<ick>, ["~> 0.3.0"])
+      s.add_dependency(%q<atom-tools>, ["~> 2.0.3"])
+      s.add_dependency(%q<highline>, ["~> 1.5.0"])
+      s.add_dependency(%q<fattr>, ["~> 1.0.3"])
       s.add_dependency(%q<bones>, [">= 2.5.1"])
     end
   else
+    s.add_dependency(%q<ick>, ["~> 0.3.0"])
+    s.add_dependency(%q<atom-tools>, ["~> 2.0.3"])
+    s.add_dependency(%q<highline>, ["~> 1.5.0"])
+    s.add_dependency(%q<fattr>, ["~> 1.0.3"])
     s.add_dependency(%q<bones>, [">= 2.5.1"])
   end
 end
