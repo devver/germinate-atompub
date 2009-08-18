@@ -57,7 +57,11 @@ class GerminateAtompub::AtompubPublisher < Germinate::Publisher
       hl.choose { |m|
         m.readline = true
         collections.each do |c|
-          m.choice(c.title) {c}
+          m.choice(c.title) { 
+            # Necessary to construct a new collection because Service apparently
+            # doesn't propagate it's http object to the services it returns
+            Atom::Collection.new(c.href, http) 
+          }
         end
       }
     end
